@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color1--: #ffa384;
+  --color2--: #74bdcb;
+}
+body {
+  display: grid;
+  place-items: center;
+
+  font-size: 15pt;
+  min-height: 100vh;
+  background-image: linear-gradient(30deg, var(--color1--), var(--color2--));
+}
+button {
+  cursor: pointer;
+}
+.container {
+  border-radius: 7px;
+  padding: 13px;
+  background-color: #eee;
+  box-shadow: 2px 2px 20px #555;
+}
+.container .inputs {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.container .inputs * {
+  font-size: 10.5pt;
+}
+.container .inputs input {
+  border: 1px #111 solid;
+  border-radius: 5px 0px 0px 5px;
+  border-right: none;
+  background-color: #fff;
+  padding: 2px 7px;
+  outline: none;
+}
+.container .inputs button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  background-color: #4f00e5;
+  padding: 5px 10px;
+  color: snow;
+}
+.task-list {
+  list-style-position: inside;
+  font-family: "Josefin Sans", sans-serif;
+}
+.task-list li {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "before task task task task edite  rem";
+  padding: 5px;
+}
+.task-list li::before {
+  content: attr(data-index) ".";
+  grid-area: before;
+}
+/* =============================== start style for remove button ================================= */
+.task-list li button.remove {
+  grid-area: rem;
+  margin-left: 5px;
+  background-color: var(--color1--);
+  color: rgb(54, 49, 49);
+  border: 1px solid var(--color1--);
+  box-shadow: 0 0 10px var(--color1--);
+  border-radius: 3px;
+  transition: 0.5s all;
+}
+.task-list li button.remove:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid var(--color1--);
+}
+/* ====================== end style for remove button ======================= */
+
+/* ================= start style for edite button ====================== */
+.task-list li button.edite {
+  grid-area: edite;
+  background-color: var(--color2--);
+  color: rgb(54, 49, 49);
+  border: 1px solid var(--color2--);
+  box-shadow: 0 0 10px var(--color2--);
+  border-radius: 3px;
+  transition: 0.5s all;
+}
+.task-list li button.edite:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid var(--color2--);
+  box-shadow: unset 0 0 10px var(--color2--);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(22, 20, 20);
+}
+/* ======================== end style for edite button============================ */
+
+.task-list li span {
+  display: inline-block;
+  grid-area: task;
+}
+/* here i wana add transition to plus like rotate  */
+.fa-plus {
+  transition: 0.5s all;
+}
+/* this is class for rotate icone pluse to 40deg  */
+.active {
+  transform: rotate(40deg);
+}
