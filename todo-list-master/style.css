@@ -72,7 +72,7 @@ button {
   grid-area: rem;
   margin-left: 5px;
   background-color: var(--color1--);
-  color: rgb(54, 49, 49);
+  color: white;
   border: 1px solid var(--color1--);
   box-shadow: 0 0 10px var(--color1--);
   border-radius: 3px;
@@ -80,7 +80,7 @@ button {
 }
 .task-list li button.remove:hover {
   background-color: white;
-  color: black;
+  color: var(--color1--);
   border: 1px solid var(--color1--);
 }
 /* ====================== end style for remove button ======================= */
@@ -89,7 +89,7 @@ button {
 .task-list li button.edite {
   grid-area: edite;
   background-color: var(--color2--);
-  color: rgb(54, 49, 49);
+  color: white;
   border: 1px solid var(--color2--);
   box-shadow: 0 0 10px var(--color2--);
   border-radius: 3px;
@@ -97,12 +97,12 @@ button {
 }
 .task-list li button.edite:hover {
   background-color: white;
-  color: black;
+  color: var(--color2--) ;
   border: 1px solid var(--color2--);
   box-shadow: unset 0 0 10px var(--color2--);
   font-size: 14px;
   font-weight: 500;
-  color: rgb(22, 20, 20);
+  
 }
 /* ======================== end style for edite button============================ */
 
